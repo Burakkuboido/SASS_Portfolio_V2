@@ -1,0 +1,86 @@
+@keyframes slideInDown {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes slideInDownVH {
+  0% {
+    transform: translateY(-70vh);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+.home {
+  padding-top: 25vh;
+  color: #fff;
+  transform: translateY(0%);
+  visibility: visible;
+  transition: all 1s ease-in-out;
+  animation: 1s ease-out 0s 1 slideInDown;
+  z-index: 2;
+  background-color: #272727;
+  overflow: hidden;
+  height: 100%;
+}
+.home__hi {
+  color: #00b392;
+}
+.home__name {
+  color: #00b392;
+}
+.home__job {
+  border-top: 2px solid #00b392;
+  padding-top: 1rem;
+}
+.home__location {
+  padding-bottom: 1rem;
+}
+.home h1, .home h3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+.home h1 {
+  font-size: 5rem;
+  text-align: center;
+}
+
+.open {
+  transform: translateY(-90%);
+}
+
+.arrow {
+  padding: 2rem;
+  z-index: 2;
+  transform: translateY(0%);
+  transition: all 1s ease-in-out;
+  animation: 1s ease-out 0s 1 slideInDownVH;
+  font-size: 2rem;
+}
+.arrow .home__arrow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  color: #00b392;
+}
+
+.open_visible {
+  transform: rotate(180deg);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #272727;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}/*# sourceMappingURL=main.css.map */

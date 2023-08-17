@@ -1,0 +1,69 @@
+.home {
+    padding-top: 25vh;
+    color: #fff;
+    transform: translateY(0%);
+    visibility: visible;
+    @include transition-ease;
+    animation: 1s ease-out 0s 1 slideInDown;
+    z-index: 2;
+    background-color: $primary-color;
+    overflow: hidden;
+    height: 100%;
+
+    &__hi {
+        color: $secondary-color;
+    }
+
+    &__name {
+        color: $secondary-color;
+    }
+
+    &__job {
+        border-top: 2px solid $secondary-color;
+        padding-top: 1rem;
+    }
+
+    &__location {
+        padding-bottom: 1rem;
+    }
+
+
+    h1, h3 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+    }
+
+    h1 {
+        font-size: 5rem;
+        text-align: center;
+    }
+}
+
+.open {
+    transform: translateY(-90%);
+}
+
+.arrow {
+    padding: 2rem;
+    z-index: 2;
+    transform: translateY(0%);
+    @include transition-ease;
+    animation: 1s ease-out 0s 1 slideInDownVH;
+    font-size: 2rem;
+    
+    .home__arrow {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        color: $secondary-color;
+    }
+
+}
+
+.open_visible {
+    transform: rotate(180deg);
+}
+
