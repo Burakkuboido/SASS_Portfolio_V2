@@ -17,5 +17,5 @@ function toggleHome() {
 
         showHome = false;
     }
-
 }
+

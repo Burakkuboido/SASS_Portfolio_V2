@@ -5,7 +5,7 @@
     visibility: visible;
     @include transition-ease;
     animation: 1s ease-out 0s 1 slideInDown;
-    z-index: 2;
+    z-index: 3;
     background-color: $primary-color;
     overflow: hidden;
     height: 100%;
@@ -36,7 +36,7 @@
     }
 
     h1 {
-        font-size: 5rem;
+        font-size: 4rem;
         text-align: center;
     }
 }
@@ -66,4 +66,85 @@
 .open_visible {
     transform: rotate(180deg);
 }
+
+
+
+
+.bio {
+    width: 100%;
+    height: 40vh;
+    top: 10vh;
+    position: absolute;
+    z-index: -1;
+    color: white;
+    padding: 1rem;
+    line-height: 1.5rem;
+    border-bottom: 2px solid $secondary-color;
+
+    &__secondary-color {
+        padding-bottom: 1.5rem;
+    }
+
+    &__centered {
+        text-align: center;
+    }
+
+    &__secondary-color {
+        color: $secondary-color;
+    }
+
+    &__text {
+        text-align: center;
+    }
+}
+
+.education {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    width: 100%;
+    height: 100%;
+
+
+    &__cards {
+        width: 80vw;
+        height: 35vh;
+        margin: 2rem auto 0 auto;
+        border: 2px solid #016855;
+        background: rgb(22, 22, 22);
+        position: relative;
+
+        h1 {
+            text-align: center;
+            padding-top: 0.5rem;
+            color: $secondary-color;
+
+        }
+
+        img {
+            width: 100%;
+            height: 80%;
+
+        }
+    }
+
+    &__overlay {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 100%;
+        width: 100%;
+        opacity: 0;
+        transition: .5s ease;
+        background-color: $secondary-color;
+    
+    }
+    
+    &__overlay:hover {
+        opacity: 0.3;
+    }
+}
+
+
 

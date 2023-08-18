@@ -21,7 +21,7 @@
   visibility: visible;
   transition: all 1s ease-in-out;
   animation: 1s ease-out 0s 1 slideInDown;
-  z-index: 2;
+  z-index: 3;
   background-color: #272727;
   overflow: hidden;
   height: 100%;
@@ -46,7 +46,7 @@
   margin: 0;
 }
 .home h1 {
-  font-size: 5rem;
+  font-size: 4rem;
   text-align: center;
 }
 
@@ -72,6 +72,69 @@
 
 .open_visible {
   transform: rotate(180deg);
+}
+
+.bio {
+  width: 100%;
+  height: 40vh;
+  top: 10vh;
+  position: absolute;
+  z-index: -1;
+  color: white;
+  padding: 1rem;
+  line-height: 1.5rem;
+  border-bottom: 2px solid #00b392;
+}
+.bio__secondary-color {
+  padding-bottom: 1.5rem;
+}
+.bio__centered {
+  text-align: center;
+}
+.bio__secondary-color {
+  color: #00b392;
+}
+.bio__text {
+  text-align: center;
+}
+
+.education {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  width: 100%;
+  height: 100%;
+}
+.education__cards {
+  width: 80vw;
+  height: 35vh;
+  margin: 2rem auto 0 auto;
+  border: 2px solid #016855;
+  background: rgb(22, 22, 22);
+  position: relative;
+}
+.education__cards h1 {
+  text-align: center;
+  padding-top: 0.5rem;
+  color: #00b392;
+}
+.education__cards img {
+  width: 100%;
+  height: 80%;
+}
+.education__overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: 0.5s ease;
+  background-color: #00b392;
+}
+.education__overlay:hover {
+  opacity: 0.3;
 }
 
 * {
