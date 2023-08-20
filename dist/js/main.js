@@ -19,3 +19,10 @@ function toggleHome() {
     }
 }
 
+var cards = document.querySelectorAll('.education__cards');
+
+[...cards].forEach((card)=>{
+  card.addEventListener( 'click', function() {
+    card.classList.toggle('is-flipped');
+  });
+});
