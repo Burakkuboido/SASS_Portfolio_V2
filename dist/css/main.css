@@ -28,22 +28,27 @@
 }
 .home__hi {
   color: #00b392;
+  letter-spacing: 2px;
 }
 .home__name {
   color: #00b392;
+  letter-spacing: 2px;
 }
 .home__job {
-  border-top: 2px solid #00b392;
-  padding-top: 1rem;
+  border-bottom: 3px solid #00b392;
+  padding-bottom: 1rem;
+  letter-spacing: 2px;
 }
 .home__location {
   padding-bottom: 1rem;
+  letter-spacing: 2px;
 }
 .home h1, .home h3 {
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 0;
+  letter-spacing: 2px;
 }
 .home h1 {
   font-size: 4rem;
@@ -68,6 +73,10 @@
   align-items: center;
   cursor: pointer;
   color: #00b392;
+  transition: 0.5s;
+}
+.arrow .home__arrow:hover {
+  color: white;
 }
 
 .open_visible {
@@ -76,26 +85,29 @@
 
 .bio {
   width: 100%;
-  height: 40vh;
   top: 10vh;
   position: absolute;
   z-index: -1;
   color: white;
   padding: 1rem;
   line-height: 1.5rem;
-  border-bottom: 2px solid #00b392;
+  border-bottom: 3px solid #00b392;
 }
 .bio__secondary-color {
   padding-bottom: 1.5rem;
 }
 .bio__centered {
   text-align: center;
+  font-size: 32px;
+  letter-spacing: 4px;
 }
 .bio__secondary-color {
   color: #00b392;
 }
 .bio__text {
   text-align: center;
+  font-size: 18px;
+  letter-spacing: 4px;
 }
 
 .education {
@@ -169,6 +181,27 @@
   color: white;
 }
 
+.social-icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.social-icons > a > i {
+  color: #00b392;
+  padding: 0.5rem;
+  transition: 0.5s;
+}
+
+.social-icons > a > i:hover {
+  color: white;
+}
+
+.letter-spacing {
+  letter-spacing: 2px;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -178,4 +211,10 @@
 body {
   background: #272727;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1 {
+  color: #00b392;
+  font-size: 32px;
+  text-align: center;
 }/*# sourceMappingURL=main.css.map */
