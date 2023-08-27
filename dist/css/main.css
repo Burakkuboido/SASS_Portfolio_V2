@@ -142,10 +142,13 @@
   font-size: 16px;
 }
 .education .card__face img {
+  height: 100%;
   width: 100%;
-  height: 10rem;
-  -o-object-fit: cover;
-     object-fit: cover;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.education .card__face--front h1 {
+  font-size: 24px;
 }
 .education__overlay {
   position: absolute;
@@ -173,7 +176,7 @@
 }
 
 .card__face--back {
-  transform: rotateY(180deg);
+  transform: rotateY(180deg) translateX(-100%);
 }
 .card__face--back h1 {
   font-size: 22px;
@@ -321,6 +324,36 @@ footer {
   color: #00b392;
 }
 
+@media screen and (min-width: 768px) {
+  .home {
+    padding-top: 10vh;
+  }
+  .card__face--back h1 {
+    font-size: 22px;
+  }
+  .education {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+  .education__cards {
+    height: 30vh;
+    width: 28vw;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .education {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+  }
+  .education__cards {
+    height: 40vh;
+    width: 28vw;
+  }
+}
 * {
   box-sizing: border-box;
   margin: 0;

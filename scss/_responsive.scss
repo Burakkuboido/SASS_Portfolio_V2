@@ -1,0 +1,40 @@
+@include media-md {
+    .home {
+        padding-top: 10vh;
+    }
+
+    .card__face--back {
+        h1 {
+            font-size: 22px;
+        }
+
+    }
+
+    .education {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        &__cards {
+            height: 30vh;
+            width: 28vw;
+        }
+    }
+}
+
+@include media-lg {
+    .education {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        &__cards {
+            height: 40vh;
+            width: 28vw;
+        }
+    }
+}
+
+@include media-xl {
+
+}
