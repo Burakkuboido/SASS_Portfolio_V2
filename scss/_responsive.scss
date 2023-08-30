@@ -23,6 +23,21 @@
 }
 
 @include media-lg {
+    .projects {
+        &__items {
+            grid-template-columns: 1fr 1fr 1fr;
+            width: 80%;
+
+            &__bio {
+                h2 {
+                    font-size: 2rem;
+                }
+                p {
+                    font-size: 1.5rem;
+                }
+            }
+        }
+    }
     .education {
         display: flex;
         justify-content: center;
@@ -36,5 +51,19 @@
 }
 
 @include media-xl {
+    .projects {
+        &__items {
+            grid-template-columns: 1fr 1fr 1fr;
+            width: 80%;
 
+            &__bio {
+                h2 {
+                    font-size: 3rem;
+                }
+                p {
+                    font-size: 1.5rem;
+                }
+            }
+        }
+    }
 }

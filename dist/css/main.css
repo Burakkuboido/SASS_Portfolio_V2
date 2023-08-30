@@ -223,7 +223,7 @@
   color: white;
   letter-spacing: 2px;
   font-size: 16px;
-  border-bottom: 3px solid #00b392;
+  border-bottom: 5px solid #00b392;
 }
 .projects__items {
   width: 60vw;
@@ -343,6 +343,16 @@ footer {
   }
 }
 @media screen and (min-width: 1024px) {
+  .projects__items {
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 80%;
+  }
+  .projects__items__bio h2 {
+    font-size: 2rem;
+  }
+  .projects__items__bio p {
+    font-size: 1.5rem;
+  }
   .education {
     display: flex;
     justify-content: center;
@@ -352,6 +362,18 @@ footer {
   .education__cards {
     height: 40vh;
     width: 28vw;
+  }
+}
+@media screen and (min-width: 1600px) {
+  .projects__items {
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 80%;
+  }
+  .projects__items__bio h2 {
+    font-size: 3rem;
+  }
+  .projects__items__bio p {
+    font-size: 1.5rem;
   }
 }
 * {
