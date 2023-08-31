@@ -1,13 +1,48 @@
+@include media-sm {
+    .cards {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 5rem;
+        padding-bottom: 8rem;
+        border-bottom: 5px solid $secondary-color;
+    }
+    .flip-card {
+        height: 250px;
+        width: 250px;
+    }
+    .cards {
+        gap: 10rem;
+    }
+    
+}
+
+
 @include media-md {
-    .home {
-        padding-top: 10vh;
+    
+    .flip-card-back {
+        h1 {
+            font-size: 20px;
+        }
     }
 
-    .card__face--back {
-        h1 {
-            font-size: 22px;
-        }
-
+    .cards {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        padding-bottom: 8rem;
+        border-bottom: 5px solid $secondary-color;
+        gap: 2rem;
+    }
+    
+    .flip-card {
+        height: 200px;
+        width: 200px;
+    }
+    .home {
+        padding-top: 10vh;
     }
 
     .education {
@@ -23,6 +58,25 @@
 }
 
 @include media-lg {
+    .flip-card-front {
+        h1 {
+            font-size: 32px;
+        }
+    }
+    .flip-card-back {
+        h1 {
+            font-size: 32px;
+        }
+    }
+    .cards {
+        gap: 2rem;
+    }
+
+    .flip-card {
+        height: 300px;
+        width: 300px;
+    }
+
     .projects {
         &__info {
             margin: auto;
@@ -57,6 +111,10 @@
 }
 
 @include media-xl {
+    .flip-card {
+        height: 400px;
+        width: 400px;
+    }
     .projects {
         &__items {
             grid-template-columns: 1fr 1fr 1fr;
