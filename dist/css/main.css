@@ -111,75 +111,63 @@
   letter-spacing: 4px;
 }
 
-.education {
-  padding-top: 1rem;
-  padding-bottom: 2rem;
-  width: 100%;
-  height: 100%;
-  perspective: 1500px;
-  border-bottom: 3px solid #00b392;
+.cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 5rem;
+  padding-bottom: 8rem;
+  border-bottom: 5px solid #00b392;
 }
-.education__cards {
-  width: 65vw;
-  height: 40vh;
-  margin: 2rem auto 0 auto;
-  border: 2px solid #016855;
-  background: rgb(22, 22, 22);
+
+.flip-card {
+  background-color: transparent;
+  width: 400px;
+  height: 400px;
+  perspective: 1000px;
+}
+
+.flip-card-inner {
   position: relative;
-  cursor: pointer;
-  transform-style: preserve-3d;
-  transform-origin: center right;
-  transition: transform 1s;
-}
-.education__cards h1 {
-  padding-top: 0.5rem;
-  color: #00b392;
-  letter-spacing: 0.3rem;
-}
-.education__cards h5 {
-  color: #00b392;
+  width: 100%;
+  height: 100%;
   text-align: center;
-  font-size: 16px;
-}
-.education .card__face img {
-  height: 100%;
-  width: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
-}
-.education .card__face--front h1 {
-  font-size: 24px;
-}
-.education__overlay {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 100%;
-  width: 100%;
-  opacity: 0;
-  transition: 0.5s ease;
-  background-color: #00b392;
-}
-.education__overlay:hover {
-  opacity: 0.3;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  border: 3px solid #00b392;
 }
 
-.is-flipped {
-  transform: translateX(-100%) rotateY(-180deg);
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
 }
 
-.card__face {
+.flip-card-front, .flip-card-back {
   position: absolute;
+  width: 100%;
+  height: 100%;
   backface-visibility: hidden;
 }
 
-.card__face--back {
-  transform: rotateY(180deg) translateX(-100%);
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
 }
-.card__face--back h1 {
-  font-size: 22px;
+.flip-card-front h5 {
+  color: white;
+  padding-top: 0.5rem;
+}
+.flip-card-front img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.flip-card-back {
+  background-color: #272727;
+  color: white;
+  transform: rotateY(180deg);
 }
 
 .centered {
@@ -343,9 +331,16 @@ footer {
   }
 }
 @media screen and (min-width: 1024px) {
+  .projects__info {
+    margin: auto;
+    border-bottom: 0;
+  }
   .projects__items {
     grid-template-columns: 1fr 1fr 1fr;
     width: 80%;
+  }
+  .projects__items__bio {
+    margin: auto;
   }
   .projects__items__bio h2 {
     font-size: 2rem;

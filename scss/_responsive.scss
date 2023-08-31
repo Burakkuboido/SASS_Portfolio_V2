@@ -24,11 +24,17 @@
 
 @include media-lg {
     .projects {
+        &__info {
+            margin: auto;
+            border-bottom: 0;
+        }
+
         &__items {
             grid-template-columns: 1fr 1fr 1fr;
             width: 80%;
 
             &__bio {
+                margin: auto;
                 h2 {
                     font-size: 2rem;
                 }
